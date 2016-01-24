@@ -24,7 +24,7 @@ if [ ! -d "$HOME/dotfiles" ]; then
 fi
 
 echo "Upgrading"
-
+git pull origin master
 for f in $HOME/dotfiles/zsh/prezto/* ; do
   ln -sf $f "$HOME/.$(basename $f)"
 done
