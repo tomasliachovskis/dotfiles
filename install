@@ -1,0 +1,39 @@
+#!/bin/bash
+
+if [ ! -d "$HOME/dotfiles" ]; then
+    echo "Installing Tomas Liachovskis dotfiles ..."
+    git clone https://github.com/tomasliachovskis/dotfiles.git "$HOME/dotfiles"
+
+    echo "First time installation"
+    if [ $(uname -s) = 'Linux' ]; then
+      # Update sources
+      sudo apt-get install update
+
+      # Libraries
+      sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev
+
+      sudo apt-get install silversearcher-ag tmux exuberant-ctags
+
+      # Zsh
+      sudo apt-get install -y zsh
+
+      if [ ! -d "$HOME/.zprezto" ]; then
+        git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+      fi
+    fi
+fi
+
+echo "Upgrading"
+
+for f in $HOME/dotfiles/zsh/prezto/* ; do
+  ln -sf $f "$HOME/.$(basename $f)"
+done
+
+ln -sf "$HOME/dotfiles/zsh/zshrc" "$HOME/.zshrc"
+
+# Dot files
+for f in $HOME/dotfiles/dotfiles/*; do
+  if [ -f $f ]; then
+    ln -sf $f "$HOME/.$(basename $f)"
+  fi
+done

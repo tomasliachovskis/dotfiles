@@ -1,0 +1,11 @@
+tmp/*
+temp/*
+.DS_Store
+tags
+.bundle
+.agignore
+.agignore2
+.vim-bookmarks
+/bower_components/*
+/node_modules/*
+/.idea

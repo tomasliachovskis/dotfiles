@@ -1,0 +1,20 @@
+# Folgers
+.git
+.hg
+.svn
+tmp
+coverage
+log
+node_modules
+public
+vendor
+
+# Extensions
+*.png
+*.gif
+*.jpeg
+*.jpg
+*.swn
+*.iml
+*.svg
+
