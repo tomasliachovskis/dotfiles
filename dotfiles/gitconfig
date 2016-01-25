@@ -1,6 +1,6 @@
 [user]
   name = Tomas Liachovskis
-  email = tomas.liachovskis@gmail.com
+  email = liachovskis@gmail.com
 
 [help]
   autocorrect = 50
@@ -33,7 +33,7 @@
   editor = "$EDITOR"
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
-  autocrlf = input
+  autocrlf = true
 
 [alias]
   st = "status -sb"
