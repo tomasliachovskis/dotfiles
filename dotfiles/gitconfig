@@ -33,7 +33,7 @@
   editor = "$EDITOR"
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
-  autocrlf = true
+  autocrlf = false
 
 [alias]
   st = "status -sb"
