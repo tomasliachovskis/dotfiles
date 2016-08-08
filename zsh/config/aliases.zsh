@@ -18,7 +18,6 @@ alias n='node --max-old-space-size=4000'
 alias z='zsh'
 alias de='cd ~/.dev'
 alias det='cd ~/.dev/testing'
-
 # Languages
 
 # Go
@@ -85,3 +84,5 @@ alias lh='ls -alt | head' # see the last modified files
 alias cl='clear'
 
 alias psa="ps aux"
+alias hosts='sudo vim /etc/hosts'
+
